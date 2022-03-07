@@ -1,6 +1,6 @@
 ## Dependency Injection Revise
 
-### What is What is 'Module' ?
+### What is 'Module' ?
 
 <b> Ans:- </b> Basically , Module is a Object . You can say Module is  a container for dependencies .
  Module lives specific amount time inside android app . Inside this Module we can define dependencies (like : Retrofit Object , Room Object etc.)
