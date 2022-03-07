@@ -2,7 +2,7 @@
 
 ### What is What is 'Module' ?
 
-Ans:- Basically , Module is a Object . You can say Module is  a container for dependencies .
+<h6> Ans:- </h6> Basically , Module is a Object . You can say Module is  a container for dependencies .
  Module lives specific amount time inside android app . Inside this Module we can define dependencies (like : Retrofit Object , Room Object etc.)
 
  In Dagger-Hilt we can scope our dependencies , with some annotation, we can restrict the life of dependencies of Module in Android Application
