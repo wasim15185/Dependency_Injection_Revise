@@ -14,5 +14,12 @@
      2. If 'Module' annotated with 'ActivityComponent' then all then all dependencies of Module live as long as Our 'Activity' live 
      3. If 'Module' annotated with 'ViewModelComponent' then all then all dependencies of Module live as long as Our 'ViewModel' live 
       etc ...
- ) </p>
+ )
+</p>
     
+#### What is the work of '@Inject' annotation ? 
+
+=> Basically , we can use "@Inject" annotation in two place . 
+                            1. Inside Constructor
+                            2. Field Injection 
+            
