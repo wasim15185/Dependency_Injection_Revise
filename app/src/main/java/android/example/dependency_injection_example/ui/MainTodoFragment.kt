@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.example.dependency_injection_example.R
+import android.example.dependency_injection_example.Xyz
 import android.example.dependency_injection_example.databinding.FragmentMainTodoBinding
 import android.util.Log
 import androidx.databinding.DataBindingUtil
@@ -26,6 +27,9 @@ class MainTodoFragment : Fragment() {
 
      @Inject
      lateinit var demo:Demo
+
+     @Inject
+     lateinit var xyz: Xyz
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
