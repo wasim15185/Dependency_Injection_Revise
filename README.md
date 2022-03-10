@@ -20,5 +20,8 @@
 ### What is the work of '@Inject' annotation ? 
 
 => Basically , we can use "@Inject" annotation in two places . **1. Inside Constructor** , **2. Field Injection** 
-> Note : Dagger-Hilt inject dependencies 
+> Note : Dagger-Hilt inject dependencies inside a variable depends on Type of variable . 
+> If **variable-Type** dependency is **available** inside Dagger-Hilt then sure it will inject that 
+> dependency inside that variable but If **variable-Type** dependency is **Not available**  inside Dagger-Hilt
+> then Dagger-Hilt throw Error
             
