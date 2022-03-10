@@ -19,5 +19,6 @@
     
 ### What is the work of '@Inject' annotation ? 
 
-=> Basically , we can use "@Inject" annotation in two place . **1. Inside Constructor** , **2. Field Injection** 
+=> Basically , we can use "@Inject" annotation in two places . **1. Inside Constructor** , **2. Field Injection** 
+> Note : Dagger-Hilt inject dependencies 
             
