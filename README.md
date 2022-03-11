@@ -30,12 +30,23 @@
 If I write `@Inject` annotation in-front of constructor of `any Class` . Then Dagger-Hilt , get ability to create class automatically and if any variable needs this type then Dagger-Hilt Inject that type dependency.
 
 ```
-class Demo @Inject constructor() { //  <==  See Here I write `@Inject` infront of constructor that means Dagger-Hilt can 
-                                  //       create object of this class automatically
+class Demo @Inject constructor() { //  <==  See Here I write `@Inject` infront of constructor that means 1. Dagger-Hilt can 
+                                  // create object of this class automatically 2. And Dagger-Hilt can inject dependency anywhare without Module
     private val TAG = this::class.java.simpleName
     fun call(){
         println("I am from $TAG class")
     }
 }
+
+class Xyz @Inject constructor( private val demo: Demo ){ //  <==  See Here I write `@Inject` infront of constructor that means Dagger Hilt will create 
+            // Object this class automatically without creating a module . but problem is constructor required object of Demo class how chould Dagger-Hilt create instance of Xyz class ?
+            // Ans :- We know When we write `@Inject` infront of constructor that means 1. Dagger-Hilt can  create object of this class automatically 
+            // 2. And Dagger-Hilt can inject dependency anywhare without Module 
+            // Here Demo class constructor annotated with `@Inject` so automaticlly object of "Demo" class will created and automatically
+             // dependency of "Demo" class is avalible in Dagger-Hilt and if any where that dependency will need that it will provided by deggaer
+
+
+}
+
 
 ```
