@@ -1,9 +1,14 @@
 package android.example.dependency_injection_example.di
 
+import android.content.Context
 import android.example.dependency_injection_example.Demo
+import android.example.dependency_injection_example.model.TodoDatabase
+import android.example.dependency_injection_example.utils.Constant.DATABASE_NAME
+import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
@@ -35,6 +40,18 @@ object DatabaseModule {
 
     @Provides
     fun provideGetString():String=" I am from Database Module "
+
+
+    @Singleton
+    @Provides
+    fun provideDatabase(
+        @ApplicationContext context: Context
+    ) = Room.databaseBuilder(context, TodoDatabase::class.java,DATABASE_NAME ).build()
+
+
+    @Singleton
+    @Provides
+    fun provideDao(database:TodoDatabase)=database.todoDao()
 
 
 }
