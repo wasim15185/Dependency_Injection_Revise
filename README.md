@@ -45,6 +45,17 @@ class Xyz @Inject constructor( private val demo: Demo ){ //  <==  See Here I wri
             // Here Demo class constructor annotated with `@Inject` so automaticlly object of "Demo" class will created and automatically
              // dependency of "Demo" class is avalible in Dagger-Hilt and if any where that dependency will need that it will provided by deggaer
 
+}
+
+
+
+@AndroidEntryPoint
+class MainTodoFragment : Fragment() {
+      @Inject
+     lateinit var demo:Demo // <- Field Injection
+
+     @Inject
+     lateinit var xyz: Xyz // <- Field Injection
 
 }
 
