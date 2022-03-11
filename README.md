@@ -27,4 +27,14 @@
 
 
 #### Inside Constructor : 
-If I write `@Inject` annotation in-front of constructor of `any Class` . Then Dagger-Hilt , get ability to create class automatically and if any variable needs this type of 
+If I write `@Inject` annotation in-front of constructor of `any Class` . Then Dagger-Hilt , get ability to create class automatically and if any variable needs this type then Dagger-Hilt Inject that type dependency.
+
+```
+class Demo @Inject constructor() { //  <==  See Here I write `@Inject` infront of constructor that means Dagger-Hilt can create object of this class automatically
+    private val TAG = this::class.java.simpleName
+    fun call(){
+        println("I am from $TAG class")
+    }
+}
+
+```
