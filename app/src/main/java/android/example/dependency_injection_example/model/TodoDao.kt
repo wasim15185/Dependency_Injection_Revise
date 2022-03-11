@@ -1,6 +1,7 @@
 package android.example.dependency_injection_example.model
 
 import android.example.dependency_injection_example.model.data.TodoData
+import androidx.lifecycle.LiveData
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow
 
@@ -9,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface TodoDao {
 
     @Query("SELECT * FROM todo_table_of_di ORDER BY id ASC")
-    fun getAllTasks(): Flow<List<TodoData>>
+    fun getAllTasks(): LiveData<MutableList<TodoData>>
 
     @Query("SELECT * FROM todo_table_of_di WHERE id=:taskId")
     fun getSelectedTask(taskId:Int): Flow<TodoData>
